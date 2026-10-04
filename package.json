@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-tmp",
+  "name": "julius-ayuno-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,14 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "framer-motion": "^14.0.0",
+    "lenis": "^1.3.26",
+    "lucide-react": "^1.51.0",
+    "mp4box": "^0.5.4",
     "next": "16.3.8",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "resend": "^6.32.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

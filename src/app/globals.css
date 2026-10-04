@@ -1,26 +1,118 @@
+/* Hallmark · macrostructure: Scroll Narrative + cinematic video act · tone: cinematic-editorial · anchor hue: navy
+ * theme: applied DNA — DARK #1D3045 navy monochrome · Helvetica Neue ME · uppercase tracked display
+ * Pre-emit critique: P5 H5 E4 S5 R5 V4
+ */
+@import url("https://db.onlinewebfonts.com/c/95cecf452d3208890088a5b4c19c7ecf?family=Helvetica+Neue+ME");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* paper + ink — navy monochrome with cloud-pale ground */
+  --color-paper: #fbfcfd;
+  --color-paper-2: #f2f5f7;
+  --color-surface: #eef2f5;
+  --color-ink: #1d3045;
+  --color-muted: #51657a;
+  --color-faint: #8192a3;
+  --color-hairline: #dde3e8;
+  --color-hairline-strong: #c3ccd4;
+
+  /* accent — monochrome: emphasis comes from the navy itself */
+  --color-accent: #1d3045;
+  --color-accent-strong: #142637;
+  --color-accent-soft: #e6ebef;
+  --color-accent-bright: #e8edf1; /* for use on dark navy frames */
+
+  /* dark band — the DARK constant */
+  --color-dark: #1d3045;
+  --color-ink-2: #28415b;
+
+  /* pale cloud tone — bridges the hero clouds into the cat section (no hard seam) */
+  --color-cloud: #cdd5dd;
+
+  /* single type family — the applied design is Helvetica-only */
+  --font-display: "Helvetica Neue ME", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: "Helvetica Neue ME", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "Helvetica Neue ME", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* fluid display scale */
+  --text-hero: clamp(1.85rem, 4.2vw, 3.5rem);
+  --text-display: clamp(1.75rem, 4.5vw, 4rem);
+  --text-display-s: clamp(1.5rem, 3.2vw, 2.6rem);
+  --text-title: clamp(1.2rem, 2.1vw, 1.7rem);
+
+  /* easing + duration — matches the applied design */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html,
+body {
+  /* clip (not hidden) — hidden makes html/body a scroll container, which breaks the sticky hero */
+  overflow-x: clip;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-synthesis-weight: none;
+  }
+
+  ::selection {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    overflow-wrap: anywhere;
+    min-width: 0;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Lenis smooth-scroll base styles */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
