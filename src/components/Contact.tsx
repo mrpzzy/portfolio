@@ -50,7 +50,7 @@ export default function Contact() {
         </Reveal>
 
         <Reveal delay={0.12}>
-          <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-paper/15 bg-paper/10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-paper/15 bg-paper/10 sm:grid-cols-2 lg:grid-cols-5">
             <a
               href={profile.linkedinUrl}
               target="_blank"
@@ -85,6 +85,17 @@ export default function Contact() {
                 Telegram
               </p>
               <p className="mt-2 text-sm font-medium text-paper">{profile.telegram}</p>
+            </a>
+            <a
+              href={profile.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-ink p-6 transition-colors hover:bg-ink-2"
+            >
+              <p className="font-mono text-[0.7rem] uppercase tracking-wider text-paper/50">
+                Resume
+              </p>
+              <p className="mt-2 text-sm font-medium text-paper">View / download (PDF)</p>
             </a>
             <div className="bg-ink p-6">
               <p className="font-mono text-[0.7rem] uppercase tracking-wider text-paper/50">

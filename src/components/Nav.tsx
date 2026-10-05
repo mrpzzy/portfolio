@@ -143,6 +143,15 @@ export default function Nav() {
                 {item.label}
               </motion.a>
             ))}
+            <motion.a
+              variants={linkItem}
+              href={profile.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`text-xs font-medium uppercase tracking-[0.15em] transition-opacity hover:opacity-70 ${inkText}`}
+            >
+              Resume
+            </motion.a>
             <motion.button
               variants={linkItem}
               type="button"
@@ -219,6 +228,14 @@ export default function Nav() {
                 {item.label}
               </a>
             ))}
+            <a
+              href={profile.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="py-3 text-2xl font-light uppercase tracking-wide text-white/60 transition-colors hover:text-white sm:text-3xl"
+            >
+              Resume
+            </a>
             <button
               type="button"
               onClick={() => scrollTo("#contact")}

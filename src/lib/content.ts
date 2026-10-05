@@ -16,6 +16,7 @@ export const profile = {
   telegramUrl: "https://t.me/julsbaltazar",
   linkedin: "linkedin.com/in/solutionswithjuls",
   linkedinUrl: "https://linkedin.com/in/solutionswithjuls",
+  resumeUrl: "/resume.pdf",
 };
 
 export const hero = {
