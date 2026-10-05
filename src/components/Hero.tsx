@@ -139,14 +139,6 @@ export default function Hero() {
               >
                 Email me
               </a>
-              <a
-                href={profile.resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-ink/40 px-6 py-3 text-xs font-medium uppercase tracking-[0.15em] text-ink transition-colors hover:border-ink"
-              >
-                Resume
-              </a>
             </motion.div>
 
             <motion.div
