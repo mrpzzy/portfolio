@@ -23,7 +23,7 @@ export const hero = {
   eyebrow: "AI Automation Engineer",
   headline: "I turn business problems into working systems.",
   sub: "I put LLMs to work inside real business operations, and build the databases, automations, and software underneath them. In production, not in demos.",
-  nowLine: "Now: Independent Solutions Engineer",
+  nowLine: "Now: Independent · building client systems",
   thenLine: "Previously Lead Automator at Aruna Talent (US)",
 };
 

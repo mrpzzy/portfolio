@@ -150,7 +150,7 @@ export default function Hero() {
                   Now
                 </p>
                 <p className="mt-1 text-sm font-medium text-ink">
-                  Independent Solutions Engineer
+                  Independent · building client systems
                 </p>
               </div>
               <div className="bg-paper/70 p-4 backdrop-blur-sm">
